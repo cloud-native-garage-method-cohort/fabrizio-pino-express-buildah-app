@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: express-buildah-app-pl
+  name: nodejs
 spec:
   params:
     - name: app-name

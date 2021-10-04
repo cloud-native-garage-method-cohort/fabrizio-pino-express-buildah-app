@@ -6,7 +6,7 @@ spec:
   tls:
     termination: edge
   to:
-    name: express-buildah-app
     kind: Service
+    name: express-buildah-app
     weight: 100
   wildcardPolicy: None

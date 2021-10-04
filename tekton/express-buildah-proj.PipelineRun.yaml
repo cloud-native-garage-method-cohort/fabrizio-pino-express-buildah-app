@@ -5,7 +5,7 @@ metadata:
 spec:
   serviceAccountName: build-bot
   pipelineRef:
-    name: express-buildah-app-pl
+    name: nodejs
   params:
     - name: app-name
       value: express-buildah-proj
