@@ -65,8 +65,6 @@ spec:
         - name: app-name
           value: express-buildah-proj
         - name: source-repo
-          value: https://github.com/cloud-native-garage-method-cohort/fabrizio-pino-express-buildah-app
-        - name: source-repo
           value: $(tt.params.source-repo)
         - name: sha
           value: $(tt.params.sha)
