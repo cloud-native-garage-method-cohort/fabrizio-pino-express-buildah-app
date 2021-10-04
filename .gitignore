@@ -1,4 +1,4 @@
 node_modules/
 node_modules/*
+tekton/base/fabrizio-pietrucci-bootcamp-secret.yml
 package-lock.json
-tetkton/base/fabrizio-pietrucci-bootcamp-secret.yaml
