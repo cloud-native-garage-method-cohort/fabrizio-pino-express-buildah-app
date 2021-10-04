@@ -47,6 +47,11 @@ kind: TriggerTemplate
 metadata:
   name: vcs-trigger
 spec:
+  params:
+    - name: source-repo
+      description: Source code repository
+    - name: sha
+      description: Precise SHA of the commit to build
   resourcetemplates:
   - apiVersion: tekton.dev/v1beta1
     kind: PipelineRun
@@ -61,6 +66,10 @@ spec:
           value: express-buildah-proj
         - name: source-repo
           value: https://github.com/cloud-native-garage-method-cohort/fabrizio-pino-express-buildah-app
+        - name: source-repo
+          value: $(tt.params.source-repo)
+        - name: sha
+          value: $(tt.params.sha)
         - name: image-repo
           value: quay.io/fabrizio_pietrucci/tekton-buildah-app
       workspaces:
@@ -77,6 +86,12 @@ apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
 metadata:
   name: vcs-trigger
+spec:
+  params:
+    - name: source-repo
+      value: $(body.repository.url)
+    - name: sha
+      value: $(body.head_commit.id)
 ---
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: EventListener

@@ -9,7 +9,11 @@ spec:
       description: App name
     - name: source-repo
       type: string 
-      description: Source Code Repository
+      description: Precise SHA of the commit to build
+      default: ""
+    - name: sha
+      type: string
+      description: The github commit to use in the build
     - name: image-repo
       type: string
       description: Image Repository
@@ -23,6 +27,8 @@ spec:
       params:
         - name: url
           value: "$(params.source-repo)"
+        - name: revision
+          value: "$(params.sha)"
       workspaces:
         - name: output
           workspace: pipeline-shared-data
