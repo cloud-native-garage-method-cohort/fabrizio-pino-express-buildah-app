@@ -20,7 +20,7 @@ spec:
       schedulerName: default-scheduler
       containers:
       - name: express-buildah-app
-        image: quay.io/fabrizio_pietrucci/tekton-buildah-app:4e43ea2b799ea273cb19ef76b6f5515189e6cfbd
+        image: quay.io/fabrizio_pietrucci/nextjs-app:4e43ea2b799ea273cb19ef76b6f5515189e6cfbd
         ports:
         - name: http
           protocol: TCP
