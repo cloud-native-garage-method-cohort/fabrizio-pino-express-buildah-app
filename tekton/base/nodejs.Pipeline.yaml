@@ -9,11 +9,11 @@ spec:
       description: App name
     - name: source-repo
       type: string 
-      description: Precise SHA of the commit to build
-      default: ""
+      description: Source code repository
     - name: sha
       type: string
-      description: The github commit to use in the build
+      description: Precise SHA of the commit to build
+      default: ""
     - name: image-repo
       type: string
       description: Image Repository
